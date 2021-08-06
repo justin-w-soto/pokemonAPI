@@ -50,10 +50,10 @@ button {
   
 }
 
-button:hover{
+/* button:hover{
   background: rgb(21, 7, 221);
   opacity: 80%;
-}
+} */
 
 button:active {
   background: rgb(21, 7, 221);
