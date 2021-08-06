@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
     if(!this.state.loading) {
-      
+
       return <h1>ERROR!</h1>
     }
 
@@ -38,8 +38,9 @@ class App extends Component {
               <h1> PoKeDeX API 😛 </h1>
                 <h3> Please be patient with me, I am slow.</h3>
               
-                  <section>
+                  <section className="body">
                       <input onChange={this.updateQuery} type="text"></input>
+                      <br></br>
                       <button onClick={this.fetchData}>Gotta Catch 'em All!</button>
                       <PokeList pokemon={this.state.data} />
                   </section>

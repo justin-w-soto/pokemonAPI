@@ -5,7 +5,7 @@ class PokeList extends Component {
     render() {
         return (
             
-            <ul>
+            <ul className="turbo">
 
                 {this.props.pokemon.map((pokemon) => {
                     return <PokeItem data={ pokemon } key={ pokemon.id }/> 

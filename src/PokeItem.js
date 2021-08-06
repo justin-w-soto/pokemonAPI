@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class PokeItem extends Component {
     render() {
         return (
-            <ul>
+            <ul className="turbo">
 
                 <h2>{ this.props.data.pokemon }</h2>
                 <img src={ this.props.data.url_image } alt={"pokemon-pics"}/>
