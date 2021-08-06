@@ -47,12 +47,6 @@ class App extends Component {
 
               <h1> PoKeDeX PaRtY 😛 </h1> 
 
-              <select defaultValue={sortOrder} onChange={this.updateSort}>
-
-                    <option value="asc">Ascending</option>
-                    <option value="desc">Descending</option>
-
-              </select>
 
                 <input onChange={this.updateQuery} type="text"></input>
 
@@ -63,7 +57,14 @@ class App extends Component {
                 {!loading && (
 
                     <section>
+                      <br></br>
 
+              <select className="dropDown" defaultValue={sortOrder} onChange={this.updateSort}>
+
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+
+              </select>
                       <PokeList pokemon={this.state.data} />
 
                   </section>
