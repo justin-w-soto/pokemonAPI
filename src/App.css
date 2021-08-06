@@ -1,42 +1,106 @@
-
+body {
+  background-image: url(./assets/HD-Wallpaper-Pokemon.jpg);
+  background-attachment: fixed;
+  
+}
 h1 {
   text-align: center;
+  color: whitesmoke;
+  font-size: 100px;
+  text-shadow: 3px 3px 3px rgb(80, 78, 78);
+  
+}
+
+h2 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 50px;
+  text-shadow: 3px 3px 3px rgba(80, 78, 78, 0.884);
 }
 
 h3 {
   text-align: center; 
+
 }
 
-.turbo {
-text-align: center;
-margin-right: center;
-margin-left: center;
-}
 
 
 button {
-  border: solid 2px white;
-  box-shadow: 2px 2px 2px gray;
-  margin-left: 46%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
   margin-right: auto;
-  background: rgb(14, 33, 141);
-  color: rgb(233, 229, 23);
+  margin-top:15px;
+  height: 60px;
+  text-align: center;
+  padding-top:21px;
+  border: solid 2px rgb(238, 238, 125);
+  border-radius: 50%;
+  background: blue;
+  color:rgb(238, 238, 125);
+  font-weight: bold;
+  box-shadow: 0 4px blue;
+  
 }
 
-.input {
-  display: grid;
-  grid-template-columns: auto;
-  margin-left: 30%;
-  margin-right: 30%;
-  padding-left: 10%;
-  padding-right: 10%;
+button:hover{
+  background: rgb(21, 7, 221);
+  opacity: 80%;
+}
 
+button:active {
+  background: rgb(21, 7, 221);
+  box-shadow: 0 3px rgb(186, 186, 189);
+  transform: translateY(3px);
 }
 
 input {
-margin-left: 45%;
-margin-right: auto;
-background: rgb(253, 235, 66);
-color: rgb(255, 17, 0);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(221, 231, 236, 0.918);
+  color: red;
+  border: rgb(74, 7, 230) solid 2px;
+  border-radius: 10px;
+  height: 30px;
+  font-size: 25px;
+  font-weight: 400;
+  
+  
+}
 
+img {
+  border: rgb(74, 7, 230) solid 2px;
+  border-radius: 20px;
+  background: rgba(221, 231, 236, 0.918);
+  padding: 30px;
+}
+
+.turbo {
+  text-align: center;
+  margin-right: center;
+  margin-left: center;
+  }
+
+.dropDown {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  background: rgba(221, 231, 236, 0.918);
+  color: blue;
+  border: rgb(74, 7, 230) solid 2px;
+  border-radius: 10px;
+ 
 }
