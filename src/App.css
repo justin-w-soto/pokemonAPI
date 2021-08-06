@@ -1,6 +1,14 @@
-
+body {
+  background-image: url(./assets/HD-Wallpaper-Pokemon.jpg);
+  background-attachment: fixed;
+  
+}
 h1 {
   text-align: center;
+  color: whitesmoke;
+  font-size: 100px;
+  text-shadow: 3px 3px 3px rgb(80, 78, 78);
+  
 }
 
 h2 {
@@ -11,23 +19,46 @@ h2 {
   margin-right: auto;
   width: 30%;
   text-align: center;
+  color: whitesmoke;
+  font-size: 50px;
+  text-shadow: 3px 3px 3px rgba(80, 78, 78, 0.884);
 }
 
 h3 {
   text-align: center; 
+
 }
 
 
 
 button {
-  border: solid 2px white;
-  box-shadow: 2px 2px 2px gray;
   display: flex;
   align-content: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-top:15px;
+  height: 60px;
+  text-align: center;
+  padding-top:21px;
+  border: solid 2px rgb(238, 238, 125);
+  border-radius: 50%;
+  background: blue;
+  color:rgb(238, 238, 125);
+  font-weight: bold;
+  box-shadow: 0 4px blue;
+  
+}
+
+button:hover{
+  background: rgb(21, 7, 221);
+  opacity: 80%;
+}
+
+button:active {
+  background: rgb(21, 7, 221);
+  box-shadow: 0 3px rgb(186, 186, 189);
+  transform: translateY(3px);
 }
 
 input {
@@ -36,8 +67,22 @@ input {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  background: rgba(221, 231, 236, 0.918);
+  color: red;
+  border: rgb(74, 7, 230) solid 2px;
+  border-radius: 10px;
+  height: 30px;
+  font-size: 25px;
+  font-weight: 400;
   
   
+}
+
+img {
+  border: rgb(74, 7, 230) solid 2px;
+  border-radius: 20px;
+  background: rgba(221, 231, 236, 0.918);
+  padding: 30px;
 }
 
 .turbo {
@@ -52,6 +97,10 @@ input {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  font-size: 25px;
+  background: rgba(221, 231, 236, 0.918);
+  color: blue;
+  border: rgb(74, 7, 230) solid 2px;
+  border-radius: 10px;
  
-  
 }
