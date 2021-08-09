@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './Header.js';
 import Home from './Home.js';
 import PokemonFacts from './PokemonFacts.js';

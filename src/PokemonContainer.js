@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PokeList from './PokeList.js';
-import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom';
 
 class PokemonContainer extends Component {
     state = { data: [], loading: true, query: null, sortOrder: 'asc', page:1, lastPage: 1 };
@@ -87,8 +86,8 @@ class PokemonContainer extends Component {
                             </>
                         )}
                     </div>
-                  Page: {this.state.page}, 
-                  of: {this.state.lastPage}
+                  Page {this.state.page}, 
+                  of {this.state.lastPage}
                  
   
                   {loading && <h3> 🐌 PLEASE BE PATIENT, I MOVE SLOW 🐌 </h3>}

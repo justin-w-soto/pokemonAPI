@@ -32,7 +32,7 @@ class PokemonFacts extends Component {
                     <img src={data.url_image} alt="It's a Pokemon" />
 
                 </div>
-                
+
             </section>
         );
     }
