@@ -1,83 +1,36 @@
 import { Component } from 'react';
-import PokeList from './PokeList.js';
+import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
+import Header from './Header.js';
+import Home from './Home.js';
+import PokemonFacts from './PokemonFacts.js';
+import PokemonContainer from './PokemonContainer.js';
 import './App.css';
+import './Header.css';
 
 class App extends Component {
-  state = { data: [], loading: true, query: null, sortOrder: 'asc' };
-
-  componentDidMount() {
-      this.fetchData();
-  }
-
-  fetchData = async () => {
-    if (!this.state.loading) {
-      this.setState({loading: true });
-    }
-
-    let url = 'https://pokedex-alchemy.herokuapp.com/api/pokedex';
-    let searchParams = new URLSearchParams();
-
-    if (this.state.query) {
-      searchParams.set('pokemon', this.state.query);
-  }
-
-    if (this.state.sortOrder) {
-    searchParams.set('sort', 'pokemon');
-    searchParams.set('direction', this.state.sortOrder);
-}
-
-      url = url + `?${searchParams.toString()}`;
-      let response = await fetch(url);
-      let data = await response.json();
-      this.setState({ data: data.results, loading: false });
-  };
-
-  updateQuery = (e) => {
-      this.setState({ query: e.target.value });
-  };
-
-  updateSort = (e) => {
-    this.setState({ sortOrder: e.target.value });
-};
-
   render() {
-    const { loading, sortOrder } = this.state;
-    return(
-          <div>
+      return (
+          <section className="app">
 
-              <h1> PoKeDeX PaRtY 😛 </h1> 
+              <BrowserRouter>
 
+                  <Header />
 
-                <input onChange={this.updateQuery} type="text"></input>
+                  <Switch>
 
-                <button onClick={this.fetchData}>Search!</button>
+                      <Route path="/pokemon/:id" component={PokemonFacts} />
 
-                {loading && <h3> 🐌 PLEASE BE PATIENT, I MOVE SLOW 🐌 </h3>}
+                      <Route path="/pokemon" component={PokemonContainer} />
 
-                {!loading && (
+                      <Route path="/" component={Home} />
 
-                    <section>
-                      <br></br>
+                  </Switch>
 
-              <select className="dropDown" defaultValue={sortOrder} onChange={this.updateSort}>
+              </BrowserRouter>
 
-                    <option value="asc">Ascending</option>
-                    <option value="desc">Descending</option>
-
-              </select>
-                      <PokeList pokemon={this.state.data} />
-
-                  </section>
-                    
-
-                    
-                )}
-
-          </div>
+          </section>
       );
   }
 }
-
 export default App;
-
 
