@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PokeList from './PokeList.js';
 
 class PokemonContainer extends Component {
-    state = { data: [], loading: true, query: null, sortOrder: 'asc', page:1, lastPage: 1 };
+    state = { data: [], loading: true, query: null, sortOrder: 'asc', page: 1, lastPage: 1 };
   
     componentDidMount() {
         this.fetchData();
@@ -32,6 +32,7 @@ class PokemonContainer extends Component {
         let data = await response.json();
         let lastPage = Math.ceil(data.count / data.perPage);
         this.setState({ data: data.results, loading: false, lastPage });
+   
     };
   
     updateQuery = (e) => {
@@ -65,14 +66,14 @@ class PokemonContainer extends Component {
   
                 <div className="search-controls">
   
+  
+                <input onChange={this.updateQuery} type="text" placeholder="Search for your favorite Pokemon"></input>
                 <select className="dropDown" defaultValue={sortOrder} onChange={this.updateSort}>
   
                       <option value="asc">Ascending</option>
                       <option value="desc">Descending</option>
   
                 </select>
-  
-                  <input onChange={this.updateQuery} type="text"></input>
                   <button onClick={this.fetchData}>Search</button>
   
                   </div>
@@ -87,9 +88,16 @@ class PokemonContainer extends Component {
                             </>
                         )}
                     </div>
-                  Page {this.state.page}, 
-                  of {this.state.lastPage}
-                 
+                    <span className="counter">
+
+                        You Are Viewing Page 
+
+                        {this.state.page}|
+
+                        of | 
+                        {this.state.lastPage}
+
+                   </span>
   
                   {loading && <h3> 🐌 PLEASE BE PATIENT, I MOVE SLOW 🐌 </h3>}
   

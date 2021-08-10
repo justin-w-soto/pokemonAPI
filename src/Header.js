@@ -8,10 +8,10 @@ class Header extends Component {
 
         return ( 
             <header>
-                <div className="title">PoKeDeX PaRtY 😛</div>
+                <div className="title">PoKeDeX  </div>
                 <div className="links">
-                    <NavLink exact to="/">Home</NavLink>
-                    <NavLink to="/pokemon">Pokemon List</NavLink>
+                    <NavLink exact to="/">Home </NavLink>
+                    <NavLink to="/pokemon">Pokemon Index </NavLink>
                 </div>
             </header>
          );

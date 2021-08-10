@@ -1,14 +1,15 @@
 body {
+
   background-image: url(./assets/HD-Wallpaper-Pokemon.jpg);
   background-attachment: fixed;
-  
-}
-h1 {
   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
   color: whitesmoke;
-  font-size: 100px;
-  text-shadow: 3px 3px 3px rgb(80, 78, 78);
-  
+  font-size: 50px;
+  text-shadow: 3px 3px 3px rgba(80, 78, 78, 0.884);
 }
 
 h2 {
@@ -31,35 +32,23 @@ h3 {
 
 }
 
-
-
 button {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top:15px;
   height: 60px;
+  width: 60px;
   text-align: center;
-  padding-top:21px;
-  border: solid 2px rgb(238, 238, 125);
+  margin: 15px;
+  border: solid 1px rgb(238, 238, 125);
   border-radius: 50%;
-  background: blue;
+  background: rgba(0, 0, 255, 0.685);
   color:rgb(238, 238, 125);
   font-weight: bold;
-  box-shadow: 0 4px blue;
+  box-shadow: 0 5px rgba(5, 5, 250, 0.74);
   
 }
 
-/* button:hover{
-  background: rgb(21, 7, 221);
-  opacity: 80%;
-} */
-
 button:active {
   background: rgb(21, 7, 221);
-  box-shadow: 0 3px rgb(186, 186, 189);
+  box-shadow: 0 1px blue;
   transform: translateY(3px);
 }
 
@@ -69,28 +58,37 @@ input {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(221, 231, 236, 0.918);
-  color: red;
-  border: rgb(74, 7, 230) solid 2px;
-  border-radius: 10px;
-  height: 30px;
-  font-size: 25px;
+  margin-bottom: 1em;
+  background: rgba(221, 231, 236, 0.493);
+  color: rgba(38, 0, 255, 0.918);
+  border: rgba(232, 232, 233, 0.363) solid 2px;
+  border-radius: 3px;
+  font-size: 1.5em;
   font-weight: 400;
+  width: 20%;
   
   
 }
 
 img {
-  border: rgb(74, 7, 230) solid 2px;
-  border-radius: 20px;
+  border: rgba(56, 13, 212, 0.747) solid 2px;
+  border-radius: 3px;
   background: rgba(221, 231, 236, 0.918);
-  padding: 30px;
+  padding: 3em;
+  max-width: 400px;
+  min-width: none;
+}
+
+img:hover {
+  border: 5px solid rgba(246, 250, 22, 0.952);
 }
 
 .turbo {
-  text-align: center;
-  margin-right: center;
-  margin-left: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  flex-direction: column;
+  margin-bottom: 9em;
   }
 
 .dropDown {
@@ -99,10 +97,50 @@ img {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  font-size: 25px;
-  background: rgba(221, 231, 236, 0.918);
-  color: blue;
-  border: rgb(74, 7, 230) solid 2px;
-  border-radius: 10px;
+  margin-bottom: 2em;
+  font-size: 1.5em;
+  font-weight: 540;
+  background: rgba(221, 231, 236, 0.651);
+  color: rgba(33, 36, 197, 0.938);
+  border: rgba(224, 222, 228, 0.11) solid 2px;
+  border-radius: 3px;
  
+}
+
+.page-controls {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.counter {
+  color: blue;
+  font-size: 2em;
+
+}
+
+.details-about-pokemon {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  color: blue;
+  background: rgba(255, 255, 255, 0.562);
+  font-size: 1.5em;
+  font-weight: 300;
+  width: 30em;
+  text-align:center;
+  border:rgb(21, 7, 221) 2px solid;
+  border-radius: 3px;
+
+}
+
+
+.home {
+text-align: center;
+color: rgba(245, 245, 245, 0.445);
+font-size: 10em; 
+font-weight: 850;
+font-family: Arial, Helvetica, sans-serif;
+text-shadow: 0px 4px 3px rgba(255, 255, 255, 0.342);
+    
 }
