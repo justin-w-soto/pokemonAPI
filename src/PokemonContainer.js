@@ -15,7 +15,8 @@ class PokemonContainer extends Component {
   
       let url = 'https://pokedex-alchemy.herokuapp.com/api/pokedex';
       let searchParams = new URLSearchParams();
-  
+      searchParams.set('page', this.state.page);
+
       if (this.state.query) {
         searchParams.set('pokemon', this.state.query);
     }
@@ -23,6 +24,7 @@ class PokemonContainer extends Component {
       if (this.state.sortOrder) {
       searchParams.set('sort', 'pokemon');
       searchParams.set('direction', this.state.sortOrder);
+      
   }
   
         url = url + `?${searchParams.toString()}`;
@@ -38,29 +40,28 @@ class PokemonContainer extends Component {
   
     updateSort = (e) => {
       this.setState({ sortOrder: e.target.value });
-  };
+    };
   
     nextPage = async () => {
        this.setState({ page: this.state.page + 1 });
-    }
+    };
   
     prevPage = async () => {
        this.setState({ page: this.state.page - 1 });
-    }
+    };
   
     goToLastPage = async () => {
        this.setState({ page: this.state.lastPage })
-    }
+    };
   
     searchForPokemon = async () => {
        this.setState({ page: 1 })
-    }
+    };
   
     render() {
       const { loading, sortOrder } = this.state;
       return(
             <>
-                <h1>Get yourself some Pokemon</h1>
   
                 <div className="search-controls">
   

@@ -17,12 +17,12 @@ class App extends Component {
                   <Header />
 
                   <Switch>
+                      <Route exact path="/" component={Home} />
 
                       <Route path="/pokemon/:id" component={PokemonFacts} />
 
                       <Route path="/pokemon" component={PokemonContainer} />
 
-                      <Route path="/" component={Home} />
 
                   </Switch>
 
