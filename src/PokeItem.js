@@ -10,7 +10,7 @@ class PokeItem extends Component {
                 <h2>{ this.props.data.pokemon }</h2>
 
                 <img src={ this.props.data.url_image } alt={"pokemon-pics"}/>
-                
+              
                 </Link>
 
             </ul>
