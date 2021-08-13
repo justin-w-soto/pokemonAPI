@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PokeList from './PokeList.js';
+import LoadingSpinner from './Spinner.js';
+
 
 class PokemonContainer extends Component {
     state = { data: [], loading: true, query: null, sortOrder: 'asc', page: 1, lastPage: 1 };
@@ -63,11 +65,10 @@ class PokemonContainer extends Component {
       const { loading, sortOrder } = this.state;
       return(
             <>
-  
                 <div className="search-controls">
   
   
-                <input onChange={this.updateQuery} type="text" placeholder="Search for your favorite Pokemon"></input>
+                <input onChange={this.updateQuery} type="text" placeholder="Search"></input>
                 <select className="dropDown" defaultValue={sortOrder} onChange={this.updateSort}>
   
                       <option value="asc">Ascending</option>
@@ -79,15 +80,31 @@ class PokemonContainer extends Component {
                   </div>
                     <div className="page-controls">
                     {this.state.page > 1 && (
-                            <button onClick={this.prevPage}>Prev</button>
-                        )}
+                      <button onClick={this.prevPage}>Prev</button>
+                      )}
                         {this.state.page < this.state.lastPage && (
-                            <>
+                          <>
                                 <button onClick={this.nextPage}>Next</button>
                                 <button onClick={this.goToLastPage}>Last Page</button>
                             </>
                         )}
                     </div>
+  
+                   {loading && <LoadingSpinner/>}
+                   
+                   {!loading && (
+                     
+                     <section>
+                         <br></br>
+               
+                         <PokeList pokemon={this.state.data} />
+               
+                     </section>
+                       
+                       
+                       
+                       )}
+  
                     <span className="counter">
 
                         You Are Viewing Page 
@@ -98,26 +115,12 @@ class PokemonContainer extends Component {
                         {this.state.lastPage}
 
                    </span>
-  
-                  {loading && <h3> 🐌 PLEASE BE PATIENT, I MOVE SLOW 🐌 </h3>}
-  
-                  {!loading && (
-                    
-                    <section>
-                        <br></br>
-  
-                        <PokeList pokemon={this.state.data} />
-  
-                    </section>
-                      
-                      
-                      
-                      )}
-  
+                   <br></br><br></br><br></br>
+                  
             </>
         );
+      }
     }
-  }
-  
-  export default PokemonContainer;
-  
+    
+    export default PokemonContainer;
+    
